@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Nav,  Navbar, NavDropdown,Container } from 'react-bootstrap';
+
+import {Nav, Navbar} from 'react-bootstrap';
 import logo from '../planet.png'
 
 const NavLink = () => {
@@ -18,9 +18,10 @@ const NavLink = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Nav.Link href="">Rockets</Nav.Link>
-          <Nav.Link href="">Mission</Nav.Link>
-          <Nav.Link href="">My Profile</Nav.Link>
+          <Nav.Link href="/">Rockets</Nav.Link>
+          <Nav.Link href="/Dragons">Mission</Nav.Link>
+          <Nav.Link href="/Mission">Dragons</Nav.Link> 
+          <Nav.Link href="/MyProfile">My Profile</Nav.Link>
         </Nav>
       </Navbar.Collapse>
   </Navbar>
