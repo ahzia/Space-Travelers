@@ -1,7 +1,7 @@
 
 import {Nav, Navbar} from 'react-bootstrap';
 import logo from '../planet.png';
-import { NavLink, Router } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return(
