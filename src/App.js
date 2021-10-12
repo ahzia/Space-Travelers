@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
+} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Mission from './components/Mission';
 import Rockets from './components/Rockets';
-import MyProfile from "./components/MyProfile";
-import Dragons from "./components/Dragons";
+import MyProfile from './components/MyProfile';
+import Dragons from './components/Dragons';
 
 import './App.css';
 
 function App() {
   return (
-    <div>   
-              <Router> 
-      <header>
-        <NavBar />
-      </header>
-      <main>
+    <div>
+      <Router>
+        <header>
+          <NavBar />
+        </header>
+        <main>
 
           <Switch>
             <Route path="/Mission">
@@ -35,8 +35,8 @@ function App() {
               <Rockets />
             </Route>
           </Switch>
-      
-      </main>
+
+        </main>
       </Router>
     </div>
   );

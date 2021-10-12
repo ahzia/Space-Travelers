@@ -1,6 +1,4 @@
-const Dragons = () => {
-  return (
-      <p>Dragon</p>
-  )
-}
+const Dragons = () => (
+  <p>Dragon</p>
+);
 export default Dragons;
