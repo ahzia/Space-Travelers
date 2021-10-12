@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import NavLink from './components/NavLink';
+import NavBar from './components/NavBar';
 import Mission from './components/Mission';
 import Rockets from './components/Rockets';
 import MyProfile from "./components/MyProfile";
@@ -14,12 +14,13 @@ import './App.css';
 
 function App() {
   return (
-    <div>    
+    <div>   
+              <Router> 
       <header>
-        <NavLink />
+        <NavBar />
       </header>
       <main>
-        <Router>
+
           <Switch>
             <Route path="/Mission">
               <Mission />
@@ -34,8 +35,9 @@ function App() {
               <Rockets />
             </Route>
           </Switch>
-        </Router>
+      
       </main>
+      </Router>
     </div>
   );
 }
