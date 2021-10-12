@@ -1,11 +1,9 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPostsRequestMissions } from './redux/missions/missions';
 import NavBar from './components/NavBar';
-import Mission from './components/Mission';
+import Missions from './components/Mission';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
 import Dragons from './components/Dragons';
@@ -13,6 +11,12 @@ import Dragons from './components/Dragons';
 import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPostsRequestMissions());
+  }, []);
+
+  const missions = useSelector((state) => state.spaceReducer.missions);
   return (
     <div>
       <Router>
@@ -20,10 +24,9 @@ function App() {
           <NavBar />
         </header>
         <main>
-
           <Switch>
             <Route path="/Mission">
-              <Mission />
+              <Missions missions={missions} />
             </Route>
             <Route path="/Dragons">
               <Dragons />
@@ -35,7 +38,6 @@ function App() {
               <Rockets />
             </Route>
           </Switch>
-
         </main>
       </Router>
     </div>

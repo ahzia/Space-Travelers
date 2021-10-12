@@ -22,10 +22,10 @@ const NavBar = () => (
           <NavLink exact to="/" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">Rockets</NavLink>
         </Nav.Link>
         <Nav.Link>
-          <NavLink exact to="/Dragons" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">Mission</NavLink>
+          <NavLink exact to="/Mission" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">Mission</NavLink>
         </Nav.Link>
         <Nav.Link>
-          <NavLink exact to="/Mission" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">Dragons</NavLink>
+          <NavLink exact to="/Dragon" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">Dragons</NavLink>
         </Nav.Link>
         <Nav.Link>
           <NavLink exact to="/MyProfile" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">My Profile</NavLink>
