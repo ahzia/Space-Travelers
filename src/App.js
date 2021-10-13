@@ -1,11 +1,6 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Mission from './components/Mission';
+import Missions from './components/Mission';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
 import Dragons from './components/Dragons';
@@ -20,10 +15,9 @@ function App() {
           <NavBar />
         </header>
         <main>
-
           <Switch>
             <Route path="/Mission">
-              <Mission />
+              <Missions />
             </Route>
             <Route path="/Dragons">
               <Dragons />
@@ -35,7 +29,6 @@ function App() {
               <Rockets />
             </Route>
           </Switch>
-
         </main>
       </Router>
     </div>

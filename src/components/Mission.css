@@ -1,0 +1,29 @@
+.mission__container {
+  padding: 2rem;
+}
+
+.mission_title > ul {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  list-style: none;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+.mission_title > ul:nth-of-type(2n + 2) {
+  background-color: #f2f2f2;
+}
+
+.mission_title > ul > li {
+  border: solid 1px rgba(0, 0, 0, 0.096);
+  padding: 5px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.name {
+  font-weight: bold;
+}
