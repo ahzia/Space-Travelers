@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
-/* eslint-disable comma-dangle */
-/* eslint-disable no-use-before-define */
+import spaceData from '../../API/spacedata';
+
 const FETCH_LOADING = 'FETCH_LOADING';
 const FETCH_SUCCESS_MISSIONS = 'FETCH_SUCCESS_MISSIONS';
 const FETCH_ERROR = 'FETCH_ERROR';
@@ -9,25 +9,6 @@ const initialState = {
   loading: true,
   missions: [],
   userMissions: [],
-};
-
-export const fetchPostsRequestMissions = () => async (dispatch) => {
-  dispatch(fetchPostsLoading());
-  const request = await fetch('https://api.spacexdata.com/v3/missions');
-  const result = await request.json();
-  dispatch(
-    fetchPostsSuccessMissions(
-      result.map((mission) => {
-        const selectedData = (({ mission_id, mission_name, description }) => ({
-          mission_id,
-          mission_name,
-          description,
-          join: false,
-        }))(mission);
-        return selectedData;
-      })
-    )
-  );
 };
 
 export const fetchPostsSuccessMissions = (payload) => ({
@@ -42,6 +23,25 @@ export const fetchPostsError = () => ({
 export const fetchPostsLoading = () => ({
   type: FETCH_LOADING,
 });
+
+export const fetchPostsRequestMissions = () => async (dispatch) => {
+  dispatch(fetchPostsLoading());
+  const request = await fetch(spaceData.missions);
+  const result = await request.json();
+  dispatch(
+    fetchPostsSuccessMissions(
+      result.map((mission) => {
+        const selectedData = (({ mission_id, mission_name, description }) => ({
+          mission_id,
+          mission_name,
+          description,
+          join: false,
+        }))(mission);
+        return selectedData;
+      }),
+    ),
+  );
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

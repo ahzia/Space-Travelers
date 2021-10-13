@@ -1,8 +1,15 @@
-/* eslint-disable camelcase */
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { fetchPostsRequestMissions } from '../redux/missions/missions';
 import './Mission.css';
 
 const Missions = (props) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPostsRequestMissions());
+  }, []);
+
   const { missions } = props;
 
   return (

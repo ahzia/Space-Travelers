@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchPostsRequestMissions } from './redux/missions/missions';
+import { useSelector } from 'react-redux';
 import NavBar from './components/NavBar';
 import Missions from './components/Mission';
 import Rockets from './components/Rockets';
@@ -11,11 +9,6 @@ import Dragons from './components/Dragons';
 import './App.css';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchPostsRequestMissions());
-  }, []);
-
   const missions = useSelector((state) => state.spaceReducer.missions);
   return (
     <div>
