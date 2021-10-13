@@ -1,16 +1,22 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { fetchPostsRequestMissions } from '../redux/missions/missions';
+import store from '../redux/configureStore';
 import './Mission.css';
 
-const Missions = (props) => {
+const Missions = () => {
+  const [missions, setMissions] = useState([]);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchPostsRequestMissions());
   }, []);
 
-  const { missions } = props;
+  useEffect(() => {
+    store.subscribe(() => {
+      setMissions(store.getState().missionReducer.missions);
+    });
+  });
 
   return (
     <div className="mission__container">
@@ -34,10 +40,6 @@ const Missions = (props) => {
       </div>
     </div>
   );
-};
-
-Missions.propTypes = {
-  missions: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default Missions;

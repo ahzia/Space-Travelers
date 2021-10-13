@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import spaceData from '../../API/spacedata';
+import getData from '../../api/spacexData';
 
 const FETCH_LOADING = 'FETCH_LOADING';
 const FETCH_SUCCESS_MISSIONS = 'FETCH_SUCCESS_MISSIONS';
@@ -26,21 +26,21 @@ export const fetchPostsLoading = () => ({
 
 export const fetchPostsRequestMissions = () => async (dispatch) => {
   dispatch(fetchPostsLoading());
-  const request = await fetch(spaceData.missions);
-  const result = await request.json();
-  dispatch(
-    fetchPostsSuccessMissions(
-      result.map((mission) => {
-        const selectedData = (({ mission_id, mission_name, description }) => ({
-          mission_id,
-          mission_name,
-          description,
-          join: false,
-        }))(mission);
-        return selectedData;
-      }),
-    ),
-  );
+  getData('missions').then((result) => {
+    dispatch(
+      fetchPostsSuccessMissions(
+        result.map((mission) => {
+          const selectedData = (({ mission_id, mission_name, description }) => ({
+            mission_id,
+            mission_name,
+            description,
+            join: false,
+          }))(mission);
+          return selectedData;
+        }),
+      ),
+    );
+  });
 };
 
 const reducer = (state = initialState, action) => {
