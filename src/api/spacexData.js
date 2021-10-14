@@ -3,9 +3,9 @@ const url = 'https://api.spacexdata.com/v3';
 const getData = async (target) => {
   const endPoint = `${url}/${target}`;
   let result = '';
-  await fetch(endPoint).then((response) => response.json())
+  await fetch(endPoint)
+    .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       result = data;
     });
   return result;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { fetchPostsRequestMissions, joinMission, leaveMission } from '../redux/missions/missions';
+import store from '../redux/configureStore';
 
 import './Mission.css';
 
