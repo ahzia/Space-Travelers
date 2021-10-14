@@ -5,6 +5,7 @@ const getData = async (target) => {
   let result = '';
   await fetch(endPoint).then((response) => response.json())
     .then((data) => {
+      console.log(data);
       result = data;
     });
   return result;
