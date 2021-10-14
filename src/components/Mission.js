@@ -9,14 +9,14 @@ const Missions = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPostsRequestMissions());
-  }, []);
-
-  useEffect(() => {
     store.subscribe(() => {
       setMissions(store.getState().missionReducer.missions);
     });
   });
+
+  useEffect(() => {
+    dispatch(fetchPostsRequestMissions());
+  }, []);
 
   return (
     <div className="mission__container">

@@ -1,4 +1,3 @@
-import './Mission.css';
 import PropTypes from 'prop-types';
 
 const Rockets = (props) => {
@@ -9,8 +8,8 @@ const Rockets = (props) => {
         <div key={rocket.rocket_id} className="row d-flex my-2">
           <img className="col-md-3" src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
           <div className="col-md-9">
-            <div className="name title">{rocket.rocket_name}</div>
-            <div className="description">{rocket.description}</div>
+            <h5>{rocket.rocket_name}</h5>
+            <p>{rocket.description}</p>
             <button type="button" className="btn btn-primary">Recerve Rocket</button>
           </div>
         </div>
