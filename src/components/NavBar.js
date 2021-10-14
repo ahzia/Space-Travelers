@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../planet.png';
 
 const NavBar = () => (
-  <Navbar bg="light" expand="lg" className="">
+  <Navbar bg="light" expand="lg" className="mx-5">
     <Navbar.Brand href="">
       <img alt="" src={logo} width="30" height="30" className="d-inline-block align-top" />
       {' '}

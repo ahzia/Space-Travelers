@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
-import spaceData from '../../API/spacedata';
+import getData from '../../api/spacexData';
 
 const FETCH_LOADING = 'FETCH_LOADING';
 const FETCH_SUCCESS_MISSIONS = 'FETCH_SUCCESS_MISSIONS';
