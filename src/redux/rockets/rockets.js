@@ -7,8 +7,8 @@ const FETCH_ERROR = 'FETCH_ERROR';
 
 const initialState = {
   loading: true,
-  missions: [],
-  userMissions: [],
+  rockets: [],
+  userRockets: [],
 };
 
 export const fetchPostsSuccessRockets = (payload) => ({
@@ -24,20 +24,20 @@ export const fetchPostsLoading = () => ({
   type: FETCH_LOADING,
 });
 
-export const fetchPostsRequestRokets = () => async (dispatch) => {
+export const fetchPostsRequestRockets = () => async (dispatch) => {
   dispatch(fetchPostsLoading());
   getData('rockets').then((result) => {
     dispatch(
       fetchPostsSuccessRockets(
         result.map((rockets) => {
           const selectedData = (({
-            id, name, type, flickr_images,
+            rocket_id, rocket_name, description, flickr_images,
           }) => ({
-            id,
-            name,
-            type,
+            rocket_id,
+            rocket_name,
+            description,
             flickr_images,
-            join: false,
+            reserved: false,
           }))(rockets);
           return selectedData;
         }),
