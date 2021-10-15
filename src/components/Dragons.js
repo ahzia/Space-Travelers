@@ -8,14 +8,14 @@ const dragons = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(fetchPostsRequestDragons());
+  }, []);
+
+  useEffect(() => {
     store.subscribe(() => {
       setdragons(store.getState().dragonReducer.dragons);
     });
   });
-
-  useEffect(() => {
-    dispatch(fetchPostsRequestDragons());
-  }, []);
 
   return (
     <div className="container d-flex flex-column mx-5 my-2">
@@ -23,7 +23,7 @@ const dragons = () => {
         <div key={dragon.id} className="row d-flex my-2">
           <img
             className="col-md-3"
-            src={dragon.flicker_images[0]}
+            src={dragon.flickr_images[0]}
             alt={dragon.name}
           />
           <div className="col-md-9">

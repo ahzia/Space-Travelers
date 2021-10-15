@@ -31,12 +31,12 @@ export const fetchPostsRequestDragons = () => async (dispatch) => {
       fetchPostsSuccessDragons(
         result.map((dragon) => {
           const selectedData = (({
-            id, name, description, flicker_images,
+            id, name, description, flickr_images,
           }) => ({
             id,
             name,
             description,
-            flicker_images,
+            flickr_images,
             reserved: false,
           }))(dragon);
           return selectedData;
