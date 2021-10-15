@@ -23,7 +23,7 @@ const NavBar = () => (
           </NavLink>
         </Nav.Link>
         <Nav.Link>
-          <NavLink exact to="/Dragon" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">
+          <NavLink exact to="/Dragons" className="text-decoration-none text-dark" activeClassName="text-decoration-underline">
             Dragons
           </NavLink>
         </Nav.Link>
