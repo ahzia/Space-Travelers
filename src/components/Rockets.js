@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { leaveRocket, reserveRocket } from '../redux/rockets/rockets';
 
 const Rockets = (props) => {
   const { rockets } = props;
+  const dispatch = useDispatch();
+
   return (
     <div className="container d-flex flex-column mx-5 my-2">
       {rockets.map((rocket) => (
@@ -14,7 +18,15 @@ const Rockets = (props) => {
                 : <div />}
               {rocket.description}
             </p>
-            <button type="button" className="btn btn-primary">Recerve Rocket</button>
+            {rocket.reserved ? (
+              <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(leaveRocket(rocket.rocket_id))}>
+                Cancel Reservation
+              </button>
+            ) : (
+              <button type="button" className="btn btn-primary" onClick={() => dispatch(reserveRocket(rocket.rocket_id))}>
+                Recerve Rocket
+              </button>
+            )}
           </div>
         </div>
       ))}
