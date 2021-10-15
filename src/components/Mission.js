@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchPostsRequestMissions } from '../redux/missions/missions';
+import { fetchPostsRequestMissions, joinMission, leaveMission } from '../redux/missions/missions';
 import store from '../redux/configureStore';
+
 import './Mission.css';
 
 const Missions = () => {
@@ -33,8 +34,18 @@ const Missions = () => {
           <ul key={mission.mission_id}>
             <li className="name title">{mission.mission_name}</li>
             <li className="description">{mission.description}</li>
-            <li className="status"> </li>
-            <li className="loading"> </li>
+            <li className="status">{mission.reserved ? <div className="active">Active Member</div> : <div className="no__active">Not A Member</div>}</li>
+            <li className="loading">
+              {mission.reserved === true ? (
+                <button type="button" className="btn btn-outline-success" onClick={() => dispatch(leaveMission(mission.mission_id))}>
+                  Leave Mission
+                </button>
+              ) : (
+                <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(joinMission(mission.mission_id))}>
+                  Join Mission
+                </button>
+              )}
+            </li>
           </ul>
         ))}
       </div>

@@ -1,0 +1,19 @@
+.joined__mission__container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  max-width: 30rem;
+}
+
+.joined__mission__title {
+  align-self: center;
+}
+
+.joined__mission__item {
+  margin-bottom: 0rem;
+  padding: 1rem;
+}
+
+.border {
+  border: 1px solid black;
+}

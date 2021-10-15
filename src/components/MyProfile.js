@@ -1,4 +1,10 @@
+import ProfileMissions from './ProfileMission';
+
 const MyProfile = () => (
-  <p>MyProfile</p>
+  <div>
+    <div>
+      <ProfileMissions />
+    </div>
+  </div>
 );
 export default MyProfile;
