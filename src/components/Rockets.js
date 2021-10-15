@@ -9,7 +9,11 @@ const Rockets = (props) => {
           <img className="col-md-3" src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
           <div className="col-md-9">
             <h5>{rocket.rocket_name}</h5>
-            <p>{rocket.description}</p>
+            <p className="">
+              {rocket.reserved ? <p className="active d-inline">Reserved</p>
+                : <div />}
+              {rocket.description}
+            </p>
             <button type="button" className="btn btn-primary">Recerve Rocket</button>
           </div>
         </div>
