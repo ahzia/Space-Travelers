@@ -30,11 +30,14 @@ export const fetchPostsRequestDragons = () => async (dispatch) => {
     dispatch(
       fetchPostsSuccessDragons(
         result.map((dragon) => {
-          const selectedData = (({ dragon_id, dragon_name, description }) => ({
-            dragon_id,
-            dragon_name,
+          const selectedData = (({
+            id, name, description, flicker_images,
+          }) => ({
+            id,
+            name,
             description,
-            join: false,
+            flicker_images,
+            reserved: false,
           }))(dragon);
           return selectedData;
         }),
