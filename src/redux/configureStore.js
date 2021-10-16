@@ -11,8 +11,6 @@ const reducer = combineReducers({
   dragon: dragonReducer,
 });
 
-// const rootReducer = combineReducers({ potato: potatoReducer, tomato: tomatoReducer });
-
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 export default store;

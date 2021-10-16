@@ -1,150 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component test snapshot Missions is rendering correctly 1`] = `
-<div
-  className="mission__container"
->
-  <div
-    className="mission_title"
-  >
-    <ul>
-      <li
-        className="name title"
+exports[`Component test snapshot App renders correctly 1`] = `
+<div>
+  <header>
+    <nav
+      className="mx-5 navbar navbar-expand-lg navbar-light bg-light"
+    >
+      <span
+        className="navbar-brand"
+        href=""
       >
-        Mission
-      </li>
-      <li
-        className="description title"
-      >
-        Description
-      </li>
-      <li
-        className="status title"
-      >
-        Status
-      </li>
-      <li
-        className="loading"
-      >
+        <img
+          alt=""
+          className="d-inline-block align-top"
+          height="30"
+          src="planet.png"
+          width="30"
+        />
          
-      </li>
-    </ul>
-  </div>
-  <div
-    className="mission_title"
-  />
-</div>
-`;
-
-exports[`Component test snapshot Missions is renders correctly 1`] = `
-<div
-  className="mission__container"
->
-  <div
-    className="mission_title"
-  >
-    <ul>
-      <li
-        className="name title"
+        Space Travelers' Hub
+      </span>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        className="navbar-toggler collapsed"
+        onClick={[Function]}
+        type="button"
       >
-        Mission
-      </li>
-      <li
-        className="description title"
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        aria-expanded={null}
+        className="navbar-collapse collapse"
+        id="basic-navbar-nav"
       >
-        Description
-      </li>
-      <li
-        className="status title"
-      >
-        Status
-      </li>
-      <li
-        className="loading"
-      >
-         
-      </li>
-    </ul>
-  </div>
-  <div
-    className="mission_title"
-  />
+        <div
+          className="ms-auto navbar-nav"
+          onKeyDown={[Function]}
+        >
+          <a
+            className="nav-link"
+            data-rr-ui-event-key={null}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <a
+              aria-current="page"
+              className="text-decoration-none text-dark text-decoration-underline"
+              href="/"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              Rockets
+            </a>
+          </a>
+          <a
+            className="nav-link"
+            data-rr-ui-event-key={null}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <a
+              aria-current={null}
+              className="text-decoration-none text-dark"
+              href="/Mission"
+              onClick={[Function]}
+            >
+              Mission
+            </a>
+          </a>
+          <a
+            className="nav-link"
+            data-rr-ui-event-key={null}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <a
+              aria-current={null}
+              className="text-decoration-none text-dark"
+              href="/Dragons"
+              onClick={[Function]}
+            >
+              Dragons
+            </a>
+          </a>
+          <a
+            className="nav-link"
+            data-rr-ui-event-key={null}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <a
+              aria-current={null}
+              className="text-decoration-none text-dark"
+              href="/MyProfile"
+              onClick={[Function]}
+            >
+              My Profile
+            </a>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div
+      className="container d-flex flex-column mx-5 my-2"
+    />
+  </main>
 </div>
 `;
 
 exports[`Component test snapshot Missions renders correctly 1`] = `
-<div
-  className="mission__container"
->
-  <div
-    className="mission_title"
-  >
-    <ul>
-      <li
-        className="name title"
-      >
-        Mission
-      </li>
-      <li
-        className="description title"
-      >
-        Description
-      </li>
-      <li
-        className="status title"
-      >
-        Status
-      </li>
-      <li
-        className="loading"
-      >
-         
-      </li>
-    </ul>
-  </div>
-  <div
-    className="mission_title"
-  />
-</div>
-`;
-
-exports[`Snap Missions is rendering correctly 1`] = `
-<div
-  className="mission__container"
->
-  <div
-    className="mission_title"
-  >
-    <ul>
-      <li
-        className="name title"
-      >
-        Mission
-      </li>
-      <li
-        className="description title"
-      >
-        Description
-      </li>
-      <li
-        className="status title"
-      >
-        Status
-      </li>
-      <li
-        className="loading"
-      >
-         
-      </li>
-    </ul>
-  </div>
-  <div
-    className="mission_title"
-  />
-</div>
-`;
-
-exports[`Snapshot test Missions is rendering correctly 1`] = `
 <div
   className="mission__container"
 >
