@@ -1,3 +1,4 @@
+import MyDragons from './MyDragon';
 import MyRockets from './MyRockets';
 import ProfileMissions from './ProfileMission';
 
@@ -9,6 +10,9 @@ const MyProfile = () => (
       </div>
       <div className="col-md-3">
         <MyRockets />
+      </div>
+      <div className="col-md-3">
+        <MyDragons />
       </div>
     </div>
   </div>

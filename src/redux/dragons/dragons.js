@@ -4,6 +4,8 @@ import getData from '../../api/spacexData';
 const FETCH_LOADING = 'FETCH_LOADING';
 const FETCH_SUCCESS_DRAGONS = 'FETCH_SUCCESS_DRAGONS';
 const FETCH_ERROR = 'FETCH_ERROR';
+const RESERVE_DRAGON = 'RESERVE_DRAGON';
+const LEAVE_DRAGON = 'LEAVE_DRAGON';
 
 const initialState = {
   loading: true,
@@ -22,6 +24,16 @@ export const fetchPostsError = () => ({
 
 export const fetchPostsLoading = () => ({
   type: FETCH_LOADING,
+});
+
+export const reserveDragon = (payload) => ({
+  type: RESERVE_DRAGON,
+  payload,
+});
+
+export const leaveDragon = (payload) => ({
+  type: LEAVE_DRAGON,
+  payload,
 });
 
 export const fetchPostsRequestDragons = () => async (dispatch) => {
@@ -65,6 +77,20 @@ const reducer = (state = initialState, action) => {
         loading: false,
         dragons: [],
         error: action.payload,
+      };
+
+    case RESERVE_DRAGON:
+      return {
+        ...state,
+        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload
+          ? { ...dragon, reserved: true } : dragon))],
+      };
+
+    case LEAVE_DRAGON:
+      return {
+        ...state,
+        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload
+          ? { ...dragon, reserved: false } : dragon))],
       };
 
     default:
