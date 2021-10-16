@@ -32,9 +32,6 @@ const App = () => {
         </header>
         <main>
           <Switch>
-            <Route path="/">
-              <Rockets rockets={rockets} />
-            </Route>
             <Route path="/Mission">
               <Missions missions={missions} />
             </Route>
@@ -43,6 +40,9 @@ const App = () => {
             </Route>
             <Route path="/MyProfile">
               <MyProfile />
+            </Route>
+            <Route path="/">
+              <Rockets rockets={rockets} />
             </Route>
           </Switch>
         </main>
