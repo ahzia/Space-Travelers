@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './ProfileMission.css';
 
 const MyDragons = () => {
-  const dragons = useSelector((state) => state.dragonReducer.dragons);
+  const dragons = useSelector((state) => state.dragon.dragons);
   const dragonsReserved = dragons.filter((dragon) => dragon.reserved === true);
 
   return (

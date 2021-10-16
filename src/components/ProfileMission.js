@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './ProfileMission.css';
 
 const ProfileMissions = () => {
-  const missions = useSelector((state) => state.missionReducer.missions);
+  const missions = useSelector((state) => state.mission.missions);
   const missionJoined = missions.filter((mission) => mission.reserved === true);
 
   return (

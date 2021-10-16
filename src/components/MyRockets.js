@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './ProfileMission.css';
 
 const MyRockets = () => {
-  const rockets = useSelector((state) => state.rocketReducer.rockets);
+  const rockets = useSelector((state) => state.rocket.rockets);
   const rocketsReserved = rockets.filter((rocket) => rocket.reserved === true);
 
   return (
