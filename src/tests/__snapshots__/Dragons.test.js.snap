@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component test snapshot Dragons renders correctly 1`] = `
+<div
+  className="container d-flex flex-column mx-5 my-2"
+/>
+`;
