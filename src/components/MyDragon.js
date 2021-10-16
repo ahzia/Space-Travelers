@@ -11,8 +11,8 @@ const MyDragons = () => {
       <h3 className="joined__mission__title">{dragonsReserved.length > 0 ? 'My Dragons' : 'No Dragons Reserved!'}</h3>
       <div className="joined__mission__container">
         {dragonsReserved.map((join) => (
-          <div key={join.dragon_id}>
-            <div>{join.reserved === true ? <p className="joined__mission__item border">{join.dragon_name}</p> : <p>{null}</p>}</div>
+          <div key={join.id}>
+            <div>{join.reserved === true ? <p className="joined__mission__item border">{join.name}</p> : <p>{null}</p>}</div>
           </div>
         ))}
       </div>

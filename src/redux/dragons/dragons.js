@@ -82,14 +82,14 @@ const reducer = (state = initialState, action) => {
     case RESERVE_DRAGON:
       return {
         ...state,
-        dragons: [...state.dragons.map((dragon) => (dragon.dragon_id === action.payload
+        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload
           ? { ...dragon, reserved: true } : dragon))],
       };
 
     case LEAVE_DRAGON:
       return {
         ...state,
-        dragons: [...state.dragons.map((dragon) => (dragon.dragon_id === action.payload
+        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload
           ? { ...dragon, reserved: false } : dragon))],
       };
 

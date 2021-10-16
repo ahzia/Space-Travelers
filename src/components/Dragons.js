@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchPostsRequestDragons } from '../redux/dragons/dragons';
+import { fetchPostsRequestDragons, leaveDragon, reserveDragon } from '../redux/dragons/dragons';
 import store from '../redux/configureStore';
 
 const dragons = () => {
@@ -29,15 +29,12 @@ const dragons = () => {
           <div className="col-md-9">
             <h5>{dragon.name}</h5>
             <p>{dragon.description}</p>
-            <button type="button" className="btn btn-primary">
-              Reserve dragon
-            </button>
             {dragon.reserved ? (
-              <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(leaveDragon(dragon.dragon_id))}>
+              <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(leaveDragon(dragon.id))}>
                 Cancel Reservation
               </button>
             ) : (
-              <button type="button" className="btn btn-primary" onClick={() => dispatch(reserveDragon(dragon.dragon_id))}>
+              <button type="button" className="btn btn-primary" onClick={() => dispatch(reserveDragon(dragon.id))}>
                 Reserve Dragon
               </button>
             )}
