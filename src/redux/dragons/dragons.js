@@ -43,7 +43,9 @@ export const fetchPostsRequestDragons = () => async (dispatch) => {
     dispatch(
       fetchPostsSuccessDragons(
         result.map((dragon) => {
-          const selectedData = (({ id, name, description, flickr_images }) => ({
+          const selectedData = (({
+            id, name, description, flickr_images,
+          }) => ({
             id,
             name,
             description,
@@ -51,8 +53,8 @@ export const fetchPostsRequestDragons = () => async (dispatch) => {
             reserved: false,
           }))(dragon);
           return selectedData;
-        })
-      )
+        }),
+      ),
     );
   });
 };

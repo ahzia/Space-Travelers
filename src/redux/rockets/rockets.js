@@ -43,7 +43,9 @@ export const fetchPostsRequestRockets = () => async (dispatch) => {
     dispatch(
       fetchPostsSuccessRockets(
         result.map((rockets) => {
-          const selectedData = (({ rocket_id, rocket_name, description, flickr_images }) => ({
+          const selectedData = (({
+            rocket_id, rocket_name, description, flickr_images,
+          }) => ({
             rocket_id,
             rocket_name,
             description,
