@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux'; // useSelectors
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostsRequestRockets } from './redux/rockets/rockets';
 import { fetchPostsRequestMissions } from './redux/missions/missions';
-import store from './redux/configureStore';
 import NavBar from './components/NavBar';
 import Missions from './components/Mission';
 import Rockets from './components/Rockets';
@@ -12,8 +11,6 @@ import Dragons from './components/Dragons';
 import './App.css';
 
 const App = () => {
-  const [rockets, setRockets] = useState([]);
-  const [missions, setMissons] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,15 +18,9 @@ const App = () => {
     dispatch(fetchPostsRequestRockets());
   }, []);
 
-  // const missions = useSelector((state) => state.spaceReducer.missions);
-  // const rockets = useSelector((state) => state.spaceReducer.rockets);
+  const missions = useSelector((state) => state.mission.missions);
+  const rockets = useSelector((state) => state.rocket.rockets);
 
-  useEffect(() => {
-    store.subscribe(() => {
-      setRockets(store.getState().rocket.rockets);
-      setMissons(store.getState().mission.missions);
-    });
-  });
   return (
     <div>
       <Router>
