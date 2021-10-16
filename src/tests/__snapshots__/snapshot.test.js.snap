@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component test snapshot Missions is rendering correctly 1`] = `
+<div
+  className="mission__container"
+>
+  <div
+    className="mission_title"
+  >
+    <ul>
+      <li
+        className="name title"
+      >
+        Mission
+      </li>
+      <li
+        className="description title"
+      >
+        Description
+      </li>
+      <li
+        className="status title"
+      >
+        Status
+      </li>
+      <li
+        className="loading"
+      >
+         
+      </li>
+    </ul>
+  </div>
+  <div
+    className="mission_title"
+  />
+</div>
+`;
+
+exports[`Component test snapshot Missions is renders correctly 1`] = `
+<div
+  className="mission__container"
+>
+  <div
+    className="mission_title"
+  >
+    <ul>
+      <li
+        className="name title"
+      >
+        Mission
+      </li>
+      <li
+        className="description title"
+      >
+        Description
+      </li>
+      <li
+        className="status title"
+      >
+        Status
+      </li>
+      <li
+        className="loading"
+      >
+         
+      </li>
+    </ul>
+  </div>
+  <div
+    className="mission_title"
+  />
+</div>
+`;
+
+exports[`Component test snapshot Missions renders correctly 1`] = `
+<div
+  className="mission__container"
+>
+  <div
+    className="mission_title"
+  >
+    <ul>
+      <li
+        className="name title"
+      >
+        Mission
+      </li>
+      <li
+        className="description title"
+      >
+        Description
+      </li>
+      <li
+        className="status title"
+      >
+        Status
+      </li>
+      <li
+        className="loading"
+      >
+         
+      </li>
+    </ul>
+  </div>
+  <div
+    className="mission_title"
+  />
+</div>
+`;
+
+exports[`Snap Missions is rendering correctly 1`] = `
+<div
+  className="mission__container"
+>
+  <div
+    className="mission_title"
+  >
+    <ul>
+      <li
+        className="name title"
+      >
+        Mission
+      </li>
+      <li
+        className="description title"
+      >
+        Description
+      </li>
+      <li
+        className="status title"
+      >
+        Status
+      </li>
+      <li
+        className="loading"
+      >
+         
+      </li>
+    </ul>
+  </div>
+  <div
+    className="mission_title"
+  />
+</div>
+`;
+
+exports[`Snapshot test Missions is rendering correctly 1`] = `
+<div
+  className="mission__container"
+>
+  <div
+    className="mission_title"
+  >
+    <ul>
+      <li
+        className="name title"
+      >
+        Mission
+      </li>
+      <li
+        className="description title"
+      >
+        Description
+      </li>
+      <li
+        className="status title"
+      >
+        Status
+      </li>
+      <li
+        className="loading"
+      >
+         
+      </li>
+    </ul>
+  </div>
+  <div
+    className="mission_title"
+  />
+</div>
+`;
