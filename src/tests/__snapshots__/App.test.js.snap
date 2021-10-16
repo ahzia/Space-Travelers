@@ -156,3 +156,56 @@ exports[`Component test snapshot Missions renders correctly 1`] = `
   />
 </div>
 `;
+
+exports[`Component test snapshot Profile renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-3"
+    >
+      <div>
+        <h3
+          className="joined__mission__title"
+        >
+          No Missions joined!
+        </h3>
+        <div
+          className="joined__mission__container"
+        />
+      </div>
+    </div>
+    <div
+      className="col-md-3"
+    >
+      <div>
+        <h3
+          className="joined__mission__title"
+        >
+          No Rockets Reserved!
+        </h3>
+        <div
+          className="joined__mission__container"
+        />
+      </div>
+    </div>
+    <div
+      className="col-md-3"
+    >
+      <div>
+        <h3
+          className="joined__mission__title"
+        >
+          No Dragons Reserved!
+        </h3>
+        <div
+          className="joined__mission__container"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
