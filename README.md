@@ -4,7 +4,7 @@
 
 > A Redux based application that allow users to book rockets and join selected space missions.
 
-![](screenshot.png)
+![](space.JPG)
 
 **Additional description about the project and its features.**
 
@@ -88,15 +88,16 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## 🙎🏾‍♂️ Author
 
-### Yaseer Okino
+### Kossi-Stack
 
-- GitHub: [@yaseerokino](https://github.com/yaseerokino)
-- LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
+- GitHub: [@githubhandle](https://github.com/Kossi-stack/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kossifioklou2406/)
 
-### Donard Golaj
 
-- GitHub: []()
-- LinkedIn: []()
+### Rustamxon
+
+- GitHub: [@githubhandle](https://github.com/Rustamxon7)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rustamjon-tolipov-6a831020b)
 
 ## 👊🏾 Show your support
 
