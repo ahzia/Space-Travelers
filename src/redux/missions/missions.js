@@ -14,6 +14,10 @@ const initialState = {
   userMissions: [],
 };
 
+export const fetchPostsLoading = () => ({
+  type: FETCH_LOADING,
+});
+
 export const fetchPostsSuccessMissions = (payload) => ({
   type: FETCH_SUCCESS_MISSIONS,
   payload,
@@ -21,10 +25,6 @@ export const fetchPostsSuccessMissions = (payload) => ({
 
 export const fetchPostsError = () => ({
   type: FETCH_ERROR,
-});
-
-export const fetchPostsLoading = () => ({
-  type: FETCH_LOADING,
 });
 
 export const joinMission = (payload) => ({
