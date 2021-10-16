@@ -1,0 +1,59 @@
+.mission__container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+}
+
+.mission_title > ul {
+  display: grid;
+  grid-template-columns: 10rem 4fr 10rem 10rem;
+  list-style: none;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+.mission_title > ul:nth-of-type(2n + 2) {
+  background-color: #f2f2f2;
+}
+
+.mission_title > ul > li {
+  border: solid 1px rgba(0, 0, 0, 0.096);
+  padding: 0.5rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no__active {
+  background-color: #6d757d;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.active {
+  background-color: #17a2b9;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
