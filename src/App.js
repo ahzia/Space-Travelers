@@ -26,8 +26,8 @@ const App = () => {
 
   useEffect(() => {
     store.subscribe(() => {
-      setRockets(store.getState().rocketReducer.rockets);
-      setMissons(store.getState().missionReducer.missions);
+      setRockets(store.getState().rocket.rockets);
+      setMissons(store.getState().mission.missions);
     });
   });
   return (

@@ -13,7 +13,7 @@ const dragons = () => {
 
   useEffect(() => {
     store.subscribe(() => {
-      setdragons(store.getState().dragonReducer.dragons);
+      setdragons(store.getState().dragon.dragons);
     });
   });
 

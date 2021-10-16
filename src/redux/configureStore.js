@@ -6,8 +6,12 @@ import rocketReducer from './rockets/rockets';
 import dragonReducer from './dragons/dragons';
 
 const reducer = combineReducers({
-  missionReducer, rocketReducer, dragonReducer,
+  mission: missionReducer,
+  rocket: rocketReducer,
+  dragon: dragonReducer,
 });
+
+// const rootReducer = combineReducers({ potato: potatoReducer, tomato: tomatoReducer });
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
