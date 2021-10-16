@@ -28,7 +28,11 @@ const dragons = () => {
           />
           <div className="col-md-9">
             <h5>{dragon.name}</h5>
-            <p>{dragon.description}</p>
+            <p className="">
+              {dragon.reserved ? <p className="active d-inline">Reserved</p>
+                : <div />}
+              {dragon.description}
+            </p>
             {dragon.reserved ? (
               <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(leaveDragon(dragon.id))}>
                 Cancel Reservation

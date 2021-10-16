@@ -25,12 +25,6 @@
 
 [Link to Live Demo](https://ahzia.github.io/Space-Travelers/)
 
-## 🧰 Tools
-
-The following tools help make it easier to run this code.
-
-- [Visual Studio Code](https://code.visualstudio.com/): A source code editor
-- [git](https://git-scm.com/downloads): A tool for managing source code
 
 ## 🔥 Getting Started
 
@@ -74,7 +68,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `npm run deploy`
+
+The project is deployed in github pages.
 
 
 ## 🙎🏾‍♂️ Author
