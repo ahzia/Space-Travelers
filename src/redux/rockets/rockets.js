@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable camelcase */
 import getData from '../../api/spacexData';
 
@@ -13,6 +14,10 @@ const initialState = {
   userRockets: [],
 };
 
+export const fetchPostsLoading = () => ({
+  type: FETCH_LOADING,
+});
+
 export const fetchPostsSuccessRockets = (payload) => ({
   type: FETCH_SUCCESS_ROCKETS,
   payload,
@@ -20,10 +25,6 @@ export const fetchPostsSuccessRockets = (payload) => ({
 
 export const fetchPostsError = () => ({
   type: FETCH_ERROR,
-});
-
-export const fetchPostsLoading = () => ({
-  type: FETCH_LOADING,
 });
 
 export const reserveRocket = (payload) => ({
@@ -42,9 +43,7 @@ export const fetchPostsRequestRockets = () => async (dispatch) => {
     dispatch(
       fetchPostsSuccessRockets(
         result.map((rockets) => {
-          const selectedData = (({
-            rocket_id, rocket_name, description, flickr_images,
-          }) => ({
+          const selectedData = (({ rocket_id, rocket_name, description, flickr_images }) => ({
             rocket_id,
             rocket_name,
             description,
@@ -82,15 +81,13 @@ const reducer = (state = initialState, action) => {
     case RESERVE_ROCKET:
       return {
         ...state,
-        rockets: [...state.rockets.map((rocket) => (rocket.rocket_id === action.payload
-          ? { ...rocket, reserved: true } : rocket))],
+        rockets: [...state.rockets.map((rocket) => (rocket.rocket_id === action.payload ? { ...rocket, reserved: true } : rocket))],
       };
 
     case LEAVE_ROCKET:
       return {
         ...state,
-        rockets: [...state.rockets.map((rocket) => (rocket.rocket_id === action.payload
-          ? { ...rocket, reserved: false } : rocket))],
+        rockets: [...state.rockets.map((rocket) => (rocket.rocket_id === action.payload ? { ...rocket, reserved: false } : rocket))],
       };
 
     default:

@@ -1,36 +1,20 @@
-import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { fetchPostsRequestDragons, leaveDragon, reserveDragon } from '../redux/dragons/dragons';
-import store from '../redux/configureStore';
+import { leaveDragon, reserveDragon } from '../redux/dragons/dragons';
 
-const dragons = () => {
-  const [dragons, setdragons] = useState([]);
+const Dragons = (props) => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchPostsRequestDragons());
-  }, []);
-
-  useEffect(() => {
-    store.subscribe(() => {
-      setdragons(store.getState().dragon.dragons);
-    });
-  });
+  const { dragons } = props;
 
   return (
     <div className="container d-flex flex-column mx-5 my-2">
       {dragons.map((dragon) => (
         <div key={dragon.id} className="row d-flex my-2">
-          <img
-            className="col-md-3"
-            src={dragon.flickr_images[0]}
-            alt={dragon.name}
-          />
+          <img className="col-md-3" src={dragon.flickr_images[0]} alt={dragon.name} />
           <div className="col-md-9">
             <h5>{dragon.name}</h5>
             <p className="">
-              {dragon.reserved ? <p className="active d-inline">Reserved</p>
-                : <div />}
+              {dragon.reserved ? <p className="active d-inline">Reserved</p> : <div />}
               {dragon.description}
             </p>
             {dragon.reserved ? (
@@ -49,4 +33,12 @@ const dragons = () => {
   );
 };
 
-export default dragons;
+Dragons.defaultProps = {
+  dragons: [],
+};
+
+Dragons.propTypes = {
+  dragons: PropTypes.instanceOf(Array),
+};
+
+export default Dragons;

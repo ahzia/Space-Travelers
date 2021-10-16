@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable camelcase */
 import getData from '../../api/spacexData';
 
@@ -13,6 +14,10 @@ const initialState = {
   userDragons: [],
 };
 
+export const fetchPostsLoading = () => ({
+  type: FETCH_LOADING,
+});
+
 export const fetchPostsSuccessDragons = (payload) => ({
   type: FETCH_SUCCESS_DRAGONS,
   payload,
@@ -20,10 +25,6 @@ export const fetchPostsSuccessDragons = (payload) => ({
 
 export const fetchPostsError = () => ({
   type: FETCH_ERROR,
-});
-
-export const fetchPostsLoading = () => ({
-  type: FETCH_LOADING,
 });
 
 export const reserveDragon = (payload) => ({
@@ -42,9 +43,7 @@ export const fetchPostsRequestDragons = () => async (dispatch) => {
     dispatch(
       fetchPostsSuccessDragons(
         result.map((dragon) => {
-          const selectedData = (({
-            id, name, description, flickr_images,
-          }) => ({
+          const selectedData = (({ id, name, description, flickr_images }) => ({
             id,
             name,
             description,
@@ -52,8 +51,8 @@ export const fetchPostsRequestDragons = () => async (dispatch) => {
             reserved: false,
           }))(dragon);
           return selectedData;
-        }),
-      ),
+        })
+      )
     );
   });
 };
@@ -82,15 +81,13 @@ const reducer = (state = initialState, action) => {
     case RESERVE_DRAGON:
       return {
         ...state,
-        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload
-          ? { ...dragon, reserved: true } : dragon))],
+        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload ? { ...dragon, reserved: true } : dragon))],
       };
 
     case LEAVE_DRAGON:
       return {
         ...state,
-        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload
-          ? { ...dragon, reserved: false } : dragon))],
+        dragons: [...state.dragons.map((dragon) => (dragon.id === action.payload ? { ...dragon, reserved: false } : dragon))],
       };
 
     default:

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostsRequestRockets } from './redux/rockets/rockets';
 import { fetchPostsRequestMissions } from './redux/missions/missions';
+import { fetchPostsRequestDragons } from './redux/dragons/dragons';
 import NavBar from './components/NavBar';
 import Missions from './components/Mission';
 import Rockets from './components/Rockets';
@@ -14,12 +15,14 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPostsRequestMissions());
     dispatch(fetchPostsRequestRockets());
+    dispatch(fetchPostsRequestMissions());
+    dispatch(fetchPostsRequestDragons());
   }, []);
 
-  const missions = useSelector((state) => state.mission.missions);
   const rockets = useSelector((state) => state.rocket.rockets);
+  const missions = useSelector((state) => state.mission.missions);
+  const dragons = useSelector((state) => state.dragon.dragons);
 
   return (
     <div>
@@ -29,17 +32,17 @@ const App = () => {
         </header>
         <main>
           <Switch>
+            <Route path="/">
+              <Rockets rockets={rockets} />
+            </Route>
             <Route path="/Mission">
               <Missions missions={missions} />
             </Route>
             <Route path="/Dragons">
-              <Dragons />
+              <Dragons dragons={dragons} />
             </Route>
             <Route path="/MyProfile">
               <MyProfile />
-            </Route>
-            <Route path="/">
-              <Rockets rockets={rockets} />
             </Route>
           </Switch>
         </main>
