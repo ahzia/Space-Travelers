@@ -33,12 +33,12 @@ const dragons = () => {
               Reserve dragon
             </button>
             {dragon.reserved ? (
-              <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(leaveRocket(rocket.rocket_id))}>
+              <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(leaveDragon(dragon.dragon_id))}>
                 Cancel Reservation
               </button>
             ) : (
-              <button type="button" className="btn btn-primary" onClick={() => dispatch(reserveRocket(rocket.rocket_id))}>
-                Recerve Rocket
+              <button type="button" className="btn btn-primary" onClick={() => dispatch(reserveDragon(dragon.dragon_id))}>
+                Reserve Dragon
               </button>
             )}
           </div>
