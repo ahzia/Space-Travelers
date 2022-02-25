@@ -31,7 +31,7 @@
 ### **Setup**
 
 If you have installed git you can clone the code to your machine, or download a ZIP of all the files directly.
-[Download the ZIP from this location](https://github.com/yaseerokino/space-travelers-hub/archive/refs/heads/develop.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
+command to clone the files to your machine:
 
 ```bash
 git clone https://github.com/ahzia/Space-Travelers.git
